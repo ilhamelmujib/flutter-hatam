@@ -17,13 +17,13 @@ class _FeedItem extends State<FeedItem> {
 
   @override
   Widget build(BuildContext context) {
-    return InkWell(
-      onTap: () {
-        Navigator.push(context, MaterialPageRoute(builder: (context) {
-          return FeedScreen(feed: widget.feed);
-        }));
-      },
-      child: Card(
+      return InkWell(
+        onTap: () {
+          Navigator.push(context, MaterialPageRoute(builder: (context) {
+            return FeedScreen(feed: widget.feed);
+          }));
+        },
+        child: Card(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
