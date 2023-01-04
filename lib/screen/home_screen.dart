@@ -53,10 +53,16 @@ class PrayTime extends StatelessWidget {
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: const [
-                Text("Shubuh -(07:00:00)"),
+                Text(
+                  "Shubuh -(07:00:00)",
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.w400),
+                ),
                 SizedBox(height: 5),
-                Text("04:36"),
-                SizedBox(height: 5),
+                Text(
+                  "04:36",
+                  style: TextStyle(fontSize: 25, fontWeight: FontWeight.w600),
+                ),
+                SizedBox(height: 6),
                 Text("Lihat jadwal shalat >"),
               ],
             ),
@@ -118,7 +124,13 @@ class SahamQu extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: const [
-                Text("SahamQu"),
+                Text(
+                  "SahamQu",
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
+                ),
+                SizedBox(
+                  height: 5,
+                ),
                 Text(
                     "Yuk! Gabung investasi akhirat\nuntuk mendapatkan pasif pahala."),
               ],

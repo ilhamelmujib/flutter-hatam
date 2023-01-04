@@ -9,7 +9,7 @@ class VideoItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 300,
+      width: 320,
       padding: const EdgeInsets.all(10),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -35,7 +35,10 @@ class VideoItem extends StatelessWidget {
             ],
           ),
           const SizedBox(height: 15),
-          Text(video.title),
+          Text(
+            video.title,
+            style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
+          ),
           Text(
             video.description,
             maxLines: 1,
