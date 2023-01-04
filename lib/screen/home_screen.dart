@@ -14,27 +14,16 @@ class HomeScreen extends StatelessWidget {
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
-            children: const [
-              PrayTime(),
-              HomeMenu(),
-              SahamQu(),
+            children: [
+              const PrayTime(),
+              const HomeMenu(),
+              const SahamQu(),
               ListVideo(),
-              ListFeed()
+              const ListFeed()
             ],
           ),
         ),
       ),
-    );
-  }
-}
-
-class CustomAppBar extends StatelessWidget {
-  const CustomAppBar({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      children: [],
     );
   }
 }
@@ -148,22 +137,18 @@ class SahamQu extends StatelessWidget {
   }
 }
 
-class ListVideo extends StatefulWidget {
-  const ListVideo({super.key});
+class ListVideo extends StatelessWidget {
 
-  @override
-  State<StatefulWidget> createState() => _ListVideo();
-}
+  final scrollController = ScrollController();
 
-class _ListVideo extends State<ListVideo> {
-  final _scrollController = ScrollController();
+  ListVideo({super.key});
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
       height: 230,
       child: ListView(
-        controller: _scrollController,
+        controller: scrollController,
         scrollDirection: Axis.horizontal,
         children: videos.map((video) {
           return VideoItem(video: video);
