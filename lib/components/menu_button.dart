@@ -17,7 +17,10 @@ class MenuButton extends StatelessWidget {
           width: size,
         ),
         const SizedBox(height: 5),
-        Text(title),
+        Text(
+          title,
+          style: const TextStyle(fontSize: 12.5),
+        ),
       ],
     );
   }

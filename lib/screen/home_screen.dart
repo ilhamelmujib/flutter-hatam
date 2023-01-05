@@ -78,19 +78,34 @@ class HomeMenu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.all(10),
+      padding: const EdgeInsets.all(5),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: const [
-          MenuButton(icon: "images/ic_hafalan.png", title: "Hafalan", size: 70),
-          MenuButton(icon: "images/ic_setoran.png", title: "Setoran", size: 70),
-          MenuButton(
-              icon: "images/ic_kelas_ngaji.png",
-              title: "Kelas Ngaji",
-              size: 70),
-          MenuButton(
-              icon: "images/ic_monitoring.png", title: "Monitoring", size: 70),
-          MenuButton(icon: "images/ic_tilawah.png", title: "Tilawah", size: 70),
+          Expanded(
+            child: MenuButton(
+                icon: "images/ic_hafalan.png", title: "Hafalan", size: 50),
+          ),
+          Expanded(
+            child: MenuButton(
+                icon: "images/ic_setoran.png", title: "Setoran", size: 50),
+          ),
+          Expanded(
+            child: MenuButton(
+                icon: "images/ic_kelas_ngaji.png",
+                title: "Kelas",
+                size: 50),
+          ),
+          Expanded(
+            child: MenuButton(
+                icon: "images/ic_monitoring.png",
+                title: "Monitoring",
+                size: 50),
+          ),
+          Expanded(
+            child: MenuButton(
+                icon: "images/ic_tilawah.png", title: "Tilawah", size: 50),
+          ),
         ],
       ),
     );
@@ -104,30 +119,32 @@ class SahamQu extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-      margin: const EdgeInsets.all(10),
+      margin: const EdgeInsets.all(20),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Container(
-            padding: const EdgeInsets.all(25),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: const [
-                Text(
-                  "SahamQu",
-                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
-                ),
-                SizedBox(
-                  height: 5,
-                ),
-                Text(
-                    "Yuk! Gabung investasi akhirat\nuntuk mendapatkan pasif pahala."),
-              ],
+          Expanded(
+            child: Container(
+              padding: const EdgeInsets.all(15),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: const [
+                  Text(
+                    "SahamQu",
+                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
+                  ),
+                  SizedBox(
+                    height: 5,
+                  ),
+                  Text(
+                      "Yuk! Gabung investasi akhirat untuk mendapatkan pasif pahala."),
+                ],
+              ),
             ),
           ),
           Image.asset(
             "images/ic_sahamqu.png",
-            height: 110,
+            height: 100,
             width: 100,
             fit: BoxFit.fitHeight,
           ),
@@ -138,7 +155,6 @@ class SahamQu extends StatelessWidget {
 }
 
 class ListVideo extends StatelessWidget {
-
   final scrollController = ScrollController();
 
   ListVideo({super.key});
